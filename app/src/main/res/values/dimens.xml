@@ -1,0 +1,22 @@
+<resources>
+
+    <dimen name="DP_2">2dp</dimen>
+
+    <dimen name="DP_10">10dp</dimen>
+
+    <dimen name="DP_20">20dp</dimen>
+
+    <dimen name="DP_46">46dp</dimen>
+
+    <dimen name="DP_55">55dp</dimen>
+
+    <dimen name="DP_164">164dp</dimen>
+
+    <dimen name="DP_300">300dp</dimen>
+    <dimen name="DP_417">417dp</dimen>
+    <dimen name="DP_500">500dp</dimen>
+
+    <dimen name="DP_627">627dp</dimen>
+
+
+</resources>

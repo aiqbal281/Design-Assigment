@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:ignore="Overdraw">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgHome"
+        android:layout_width="@dimen/DP_164"
+        android:layout_height="@dimen/DP_164"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DP_20"
+        android:contentDescription="@string/search_image_icon"
+        android:src="@drawable/ic_find_home" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP_500"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/DP_20"
+        android:background="@drawable/ic_vector" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="@dimen/DP_300">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/welcome"
+            android:textAppearance="@style/welcome" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtLoginFor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtWelcome"
+            android:layout_centerHorizontal="true"
+            android:text="@string/login_for"
+            android:textAppearance="@style/login_for" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTitleEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtLoginFor"
+            android:layout_marginStart="@dimen/DP_20"
+            android:layout_marginTop="@dimen/DP_20"
+            android:text="@string/email"
+            android:textAppearance="@style/input_hint_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/emailCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitleEmail"
+            android:layout_marginTop="@dimen/DP_10"
+            android:layout_marginBottom="@dimen/DP_20"
+            android:layout_marginStart="@dimen/DP_20"
+            android:layout_marginEnd="@dimen/DP_20"
+            android:elevation="@dimen/DP_20"
+            app:cardCornerRadius="@dimen/DP_10"
+            app:cardElevation="@dimen/DP_2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_46"
+                android:background="@null"
+                android:drawableEnd="@drawable/ic_subtract"
+                android:paddingStart="@dimen/DP_20"
+                android:paddingTop="@dimen/DP_10"
+                android:paddingEnd="@dimen/DP_10"
+                android:paddingBottom="@dimen/DP_10"
+                android:singleLine="true"
+                android:textAppearance="@style/input_edit_text" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTitlePass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailCardView"
+            android:layout_marginStart="@dimen/DP_20"
+            android:text="@string/password"
+            android:textAppearance="@style/input_hint_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/passCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitlePass"
+            android:layout_marginTop="@dimen/DP_10"
+            android:layout_marginBottom="@dimen/DP_20"
+            android:layout_marginStart="@dimen/DP_20"
+            android:layout_marginEnd="@dimen/DP_20"
+            app:cardCornerRadius="@dimen/DP_10"
+            app:cardElevation="@dimen/DP_2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_46"
+                android:background="@null"
+                android:drawableEnd="@drawable/ic_view_pass"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/DP_20"
+                android:paddingTop="@dimen/DP_10"
+                android:paddingEnd="@dimen/DP_10"
+                android:paddingBottom="@dimen/DP_10"
+                android:singleLine="true"
+                android:textAppearance="@style/input_edit_text" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_55"
+            android:layout_below="@+id/passCardView"
+            android:layout_margin="@dimen/DP_20"
+            android:background="@drawable/rounded_button_bg"
+            android:text="@string/login"
+            android:textAppearance="@style/login_button"
+            app:elevation="@dimen/DP_10" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtForgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_marginStart="@dimen/DP_20"
+            android:layout_marginBottom="@dimen/DP_20"
+            android:text="@string/forgot_pass"
+            android:textAppearance="@style/input_edit_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCreateAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/DP_20"
+            android:layout_marginBottom="@dimen/DP_20"
+            android:text="@string/create_ac"
+            android:textAppearance="@style/input_hint_title" />
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
